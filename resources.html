@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Insight | Resources</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">☁️ SalesForce Insight</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="videos.html">Videos & Tutorials</a>
+                <a href="resources.html" class="active">Resources</a>
+                <a href="https://www.youtube.com/@NoNonsenseSalesforce" class="cta-btn">Subscribe</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 2rem;">
+        <h1>Developer Resources</h1>
+        <p>Handy snippets and links referenced in the videos.</p>
+
+        <div class="grid">
+            <div style="grid-column: span 2;">
+                <h3>Apex Snippet: Invoke Agent (Example)</h3>
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyCode()">Copy</button>
+                    <code id="snippet">
+// Basic structure to call an Agent
+AgentProxy proxy = new AgentProxy();
+AgentResult result = proxy.invoke('MyAgent_DevName', inputParams);
+
+if(result.isSuccess()){
+    System.debug('Agent Response: ' + result.getOutput());
+}
+                    </code>
+                </div>
+            </div>
+
+            <div>
+                <h3>Official Documentation</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://developer.salesforce.com" target="_blank" style="color:var(--primary); font-weight:bold;">🔗 Salesforce Developer Docs</a>
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <a href="https://trailhead.salesforce.com" target="_blank" style="color:var(--primary); font-weight:bold;">🔗 Trailhead</a>
+                    </li>
+                    <li>
+                        <a href="https://help.salesforce.com" target="_blank" style="color:var(--primary); font-weight:bold;">🔗 Salesforce Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Salesforce Insight.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

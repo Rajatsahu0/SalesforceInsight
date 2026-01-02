@@ -1,0 +1,218 @@
+/* styles.css */
+:root {
+    --primary: #0176D3; /* Salesforce Blue */
+    --secondary: #0B5CAB;
+    --dark: #032D60;
+    --light: #F4F6F9;
+    --white: #ffffff;
+    --text: #3E3E3C;
+}
+
+body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--light); color: var(--text); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* Navigation */
+nav { background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 20px; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+.nav-links a { margin-left: 2rem; font-weight: 600; color: var(--dark); transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+.cta-btn { background: var(--primary); color: white !important; padding: 0.5rem 1rem; border-radius: 4px; }
+.cta-btn:hover { background: var(--secondary); }
+
+/* Hero Section */
+.hero { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; padding: 4rem 20px; text-align: center; }
+.carousel-box { max-width: 900px; margin: 2rem auto 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); background: #000; position: relative; }
+.carousel-box iframe { width: 100%; height: 500px; border: none; display: block; }
+.slide { display: none; animation: fade 0.5s; }
+.slide.active { display: block; }
+
+/* Filter Section (Videos Page) */
+.filter-bar { text-align: center; padding: 2rem 0; }
+.filter-btn { background: white; border: 1px solid #ddd; padding: 8px 20px; border-radius: 20px; cursor: pointer; margin: 0 5px; font-weight: 600; transition: 0.3s; }
+.filter-btn:hover, .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+/* Grid Layouts */
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+/* Cards */
+.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+.card-body { padding: 1.5rem; }
+.tag { background: #eef4ff; color: var(--secondary); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+.card-title { margin: 10px 0; color: var(--dark); }
+
+/* Code Snippets (Resources Page) */
+.code-block { background: #1e1e1e; color: #d4d4d4; padding: 1.5rem; border-radius: 8px; font-family: monospace; overflow-x: auto; position: relative; }
+.copy-btn { position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.2); border: none; color: white; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+
+/* Footer */
+footer { background: var(--dark); color: white; text-align: center; padding: 3rem 0; margin-top: 4rem; }
+
+/* Animation */
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links { display: none; } 
+    .carousel-box iframe { height: 300px; }
+}
+
+
+/* --- ADD TO styles.css --- */
+
+/* About Section */
+.about-section { display: flex; flex-wrap: wrap; align-items: center; gap: 4rem; padding: 4rem 20px; max-width: 1200px; margin: 0 auto; }
+.about-text { flex: 1; min-width: 300px; }
+.about-image { flex: 1; min-width: 300px; text-align: center; }
+.profile-placeholder { width: 100%; max-width: 400px; height: 300px; background: #ddd; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; color: #666; }
+
+/* Stats Bar */
+.stats-bar { background: var(--secondary); color: white; padding: 3rem 0; margin: 2rem 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center; max-width: 1200px; margin: 0 auto; gap: 2rem; }
+.stat-number { font-size: 2.5rem; font-weight: 800; display: block; margin-bottom: 0.5rem; }
+
+/* Testimonials */
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+.testimonial-card { background: white; padding: 2rem; border-left: 5px solid var(--primary); box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 4px; font-style: italic; }
+
+/* Newsletter */
+.newsletter-section { background: var(--dark); color: white; text-align: center; padding: 4rem 20px; margin-top: 4rem; }
+.newsletter-box { max-width: 600px; margin: 0 auto; }
+.input-group { display: flex; gap: 10px; margin-top: 1.5rem; justify-content: center; }
+.input-field { padding: 12px; border-radius: 4px; border: none; flex: 1; max-width: 300px; }
+
+
+/* --- NEW INTERACTIVE CAROUSEL STYLES --- */
+
+.gallery-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+/* Main Stage Area */
+.main-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Enforces correct YouTube ratio */
+    background: #000;
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+}
+
+/* The Play Button Overlay */
+.play-btn-overlay {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 0, 0, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+.play-btn-overlay::after {
+    content: '▶';
+    font-size: 40px;
+    color: white;
+    margin-left: 5px; /* Visual correction */
+}
+.video-wrapper:hover .play-btn-overlay {
+    transform: scale(1.1);
+    background: red;
+}
+
+/* Floating Navigation Arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    transition: 0.2s;
+}
+.nav-arrow:hover { background: rgba(0,0,0,0.8); }
+.nav-arrow.prev { left: 0; border-radius: 0 10px 10px 0; }
+.nav-arrow.next { right: 0; border-radius: 10px 0 0 10px; }
+
+/* Video Title Overlay */
+.video-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    padding: 20px;
+    box-sizing: border-box;
+    pointer-events: none; /* Let clicks pass through to video */
+}
+.video-info h3 {
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Thumbnail Strip */
+.thumb-strip {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #1a1a1a;
+    overflow-x: auto;
+    scrollbar-width: thin; /* Firefox */
+}
+.thumb-item {
+    min-width: 140px;
+    height: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+}
+.thumb-item:hover { opacity: 1; transform: translateY(-2px); }
+.thumb-item.active-thumb {
+    opacity: 1;
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(1, 118, 211, 0.5);
+}
+
+
+/* Add to styles.css */
+
+.about-img-styled {
+    width: 100%;
+    max-width: 500px; /* Limits size on big screens */
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Soft professional shadow */
+    transition: transform 0.3s ease;
+}
+
+.about-img-styled:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}

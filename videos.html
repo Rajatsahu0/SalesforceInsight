@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Insight | Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">☁️ SalesForce Insight</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="videos.html" class="active">Videos & Tutorials</a>
+                <a href="resources.html">Resources</a>
+                <a href="https://www.youtube.com/@NoNonsenseSalesforce" class="cta-btn">Subscribe</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center; margin-top: 2rem;">Learning Library</h1>
+        
+        <div class="filter-bar">
+            <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+            <button class="filter-btn" onclick="filterSelection('agentforce')">Agentforce</button>
+            <button class="filter-btn" onclick="filterSelection('flow')">Flows</button>
+            <button class="filter-btn" onclick="filterSelection('apex')">Apex</button>
+        </div>
+
+        <div class="grid">
+            <div class="card video-card" data-category="agentforce">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/MAbWS4iX9d4" frameborder="0" allowfullscreen></iframe>
+                <div class="card-body">
+                    <span class="tag">Agentforce</span>
+                    <h3 class="card-title">Integrate Agentforce in External Website</h3>
+                    <p>Learn how to embed your agent into a public facing site.</p>
+                </div>
+            </div>
+
+            <div class="card video-card" data-category="agentforce">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/SOQXmdxMi78" frameborder="0" allowfullscreen></iframe>
+                <div class="card-body">
+                    <span class="tag">Agentforce</span>
+                    <h3 class="card-title">Create Agents Step by Step</h3>
+                    <p>A complete walkthrough of creating your first agent.</p>
+                </div>
+            </div>
+
+            <div class="card video-card" data-category="apex">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/Jla7uCAC8qw" frameborder="0" allowfullscreen></iframe>
+                <div class="card-body">
+                    <span class="tag">Apex</span>
+                    <h3 class="card-title">Invoke Agent using Apex</h3>
+                    <p>Backend coding guide to trigger agents programmatically.</p>
+                </div>
+            </div>
+
+            <div class="card video-card" data-category="flow">
+                <div style="background:#ddd; height:200px; display:flex; align-items:center; justify-content:center;">Placeholder: Flow Video</div>
+                <div class="card-body">
+                    <span class="tag">Flow</span>
+                    <h3 class="card-title">Record Triggered Flow Challenges</h3>
+                    <p>Solving complex automation scenarios.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Salesforce Insight.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

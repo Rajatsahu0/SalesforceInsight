@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Insight | No-Nonsense Learning</title>
+    <meta name="description" content="Master Agentforce, Flows, and Apex with no-nonsense tutorials.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">☁️ SalesForce Insight</div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="videos.html">Videos & Tutorials</a>
+                <a href="resources.html">Resources</a>
+                <a href="https://www.youtube.com/@NoNonsenseSalesforce" class="cta-btn" target="_blank">Subscribe</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+    <h1>Master Salesforce. <span style="color: #61dafb;">Zero Fluff.</span></h1>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Expert tutorials on Agentforce, Flows, and Apex Development.</p>
+    
+    <div class="gallery-container">
+        
+        <div class="main-stage">
+            <div id="video-player" class="video-wrapper">
+                </div>
+            
+            <button class="nav-arrow prev" onclick="moveGallery(-1)">❮</button>
+            <button class="nav-arrow next" onclick="moveGallery(1)">❯</button>
+            
+            <div class="video-info">
+                <h3 id="video-title">Loading...</h3>
+            </div>
+        </div>
+
+        <div class="thumb-strip" id="thumb-strip">
+            </div>
+    </div>
+    </header>
+
+    <section class="stats-bar">
+        <div class="stats-grid">
+            <div>
+                <span class="stat-number">50+</span>
+                <span>In-Depth Tutorials</span>
+            </div>
+            <div>
+                <span class="stat-number">100%</span>
+                <span>Practical Scenarios</span>
+            </div>
+            <div>
+                <span class="stat-number">Agentforce</span>
+                <span>Specialist Content</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+    <div class="about-text">
+        <h2 style="color: var(--primary); text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">The Philosophy</h2>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; color: var(--dark); line-height: 1.2;">Stop Memorizing. Start Building.</h1>
+        <p style="font-size: 1.1rem; color: #555;">Most Salesforce tutorials are 20 minutes of intro and 5 minutes of content. We do things differently.</p>
+        <p>At <strong>No-Nonsense Salesforce</strong>, the goal is simple: take complex topics like AI Agents, Apex patterns, and Flow logic, and break them down into executable steps you can implement in your org <em>today</em>.</p>
+        
+        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+            <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px; font-size: 1.2rem;"></i> Real-world business use cases
+            </li>
+            <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px; font-size: 1.2rem;"></i> Copy-pasteable code snippets
+            </li>
+            <li style="margin-bottom: 10px; display: flex; align-items: center;">
+                <i class="fas fa-check-circle" style="color: var(--primary); margin-right: 10px; font-size: 1.2rem;"></i> No lengthy introductions
+            </li>
+        </ul>
+        <a href="videos.html" class="cta-btn" style="display: inline-block; margin-top: 1.5rem;">Start Watching</a>
+    </div>
+
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+             alt="Coding Workflow" 
+             class="about-img-styled">
+    </div>
+</section>
+
+    <section class="container" style="margin-top: 3rem;">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Featured Learning Tracks</h2>
+        <div class="grid">
+            <div class="card card-body">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🤖</div>
+                <h3>Agentforce Series</h3>
+                <p>The future of Salesforce is AI Agents. Learn how to configure, deploy, and integrate agents with external websites.</p>
+                <a href="videos.html" style="color: var(--primary); font-weight: bold;">View Series →</a>
+            </div>
+            <div class="card card-body">
+                <div style="font-size: 2rem; margin-bottom: 10px;">⚡</div>
+                <h3>Mastering Flows</h3>
+                <p>From simple updates to complex Record-Triggered logic. We solve the challenges that trip up most Admins.</p>
+                <a href="videos.html" style="color: var(--primary); font-weight: bold;">View Series →</a>
+            </div>
+            <div class="card card-body">
+                <div style="font-size: 2rem; margin-bottom: 10px;">💻</div>
+                <h3>Apex Development</h3>
+                <p>Backend logic explained. Triggers, Asynchronous Apex, and integration patterns for developers.</p>
+                <a href="videos.html" style="color: var(--primary); font-weight: bold;">View Series →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Community Feedback</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Finally, a tutorial that doesn't waste my time. The Agentforce integration video saved me hours of debugging."</p>
+                <p style="margin-top: 1rem; font-weight: bold; font-style: normal;">- Salesforce Dev</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"The explanation of Flow challenges was crystal clear. I implemented the logic in my production org immediately."</p>
+                <p style="margin-top: 1rem; font-weight: bold; font-style: normal;">- SF Admin</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Straight to the point. Great code examples for Apex. Highly recommended channel."</p>
+                <p style="margin-top: 1rem; font-weight: bold; font-style: normal;">- Technical Architect</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="newsletter-section">
+        <div class="newsletter-box">
+            <h2>Stay Ahead of the Curve</h2>
+            <p>Get the latest tutorials and code snippets delivered directly to your inbox. No spam, just value.</p>
+            <div class="input-group">
+                <input type="email" placeholder="Enter your email" class="input-field">
+                <button class="cta-btn" style="border: none; cursor: pointer;">Join Now</button>
+            </div>
+            <p style="font-size: 0.8rem; margin-top: 1rem; opacity: 0.7;">Join 1,000+ Salesforce Professionals</p>
+        </div>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2025 Salesforce Insight. Built for the community.</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="margin: 0 10px; color: #aaa;">Privacy Policy</a>
+            <a href="#" style="margin: 0 10px; color: #aaa;">Terms</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
